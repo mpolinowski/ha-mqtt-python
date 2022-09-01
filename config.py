@@ -1,0 +1,9 @@
+mqtt_server_host = "192.168.2.115"
+mqtt_server_port = 1883
+mqtt_bind_address = ""
+mqtt_bind_port = 0
+mqtt_username = "admin"
+mqtt_password = "instar"
+mqtt_transport = "tcp"
+mqtt_keepalive = 60
+mqtt_client_id = "mqtt5_client"
