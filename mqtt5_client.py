@@ -5,7 +5,7 @@ import time
 
 from config import *
 
-f = open('config_topics.json')
+f = open('/config/python_scripts/config_topics.json')
 
 json_array = json.load(f)
 
