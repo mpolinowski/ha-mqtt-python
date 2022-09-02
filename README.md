@@ -1,0 +1,10 @@
+# Home Assistant :: MQTT Discovery 
+
+The [discovery of MQTT devices](https://www.home-assistant.io/docs/mqtt/discovery/) will enable one to use MQTT devices with only minimal configuration effort on the side of Home Assistant. The configuration is done on the device itself and the topic used by the device. Similar to the HTTP binary sensor and the HTTP sensor. To prevent multiple identical entries if a device reconnects, a unique identifier is necessary. Two parts are required on the device side: The configuration topic which contains the necessary device type and unique identifier, and the remaining device configuration without the device type.
+
+
+1. Start by defining entities for your device, e.g. [INSTAR IN-9408 2k+ WQHD IP Camera](https://mpolinowski.github.io/docs/IoT-and-Machine-Learning/Home_Automation/2022-07-10-home-assistant-mqtt-autodiscovery-part-i/2022-07-10).
+2. Prepare the data to be used by the [mqtt5-client script](https://github.com/mpolinowski/ha-mqtt-python/blob/master/mqtt5_client.py) by adding all topics and payloads to an [JSON array](https://github.com/mpolinowski/ha-mqtt-python/blob/master/config_topics.json).
+3. Add your MQTT broker credentials to the [configuration file](https://github.com/mpolinowski/ha-mqtt-python/blob/master/config.py).
+4. You can test run the script `python mqtt5_client.py`.
+5. [Add an automation to Home Assistant](https://mpolinowski.github.io/docs/IoT-and-Machine-Learning/Home_Automation/2022-07-11-home-assistant-mqtt-autodiscovery-part-ii/2022-07-11) that runs the [Python script](https://mpolinowski.github.io/docs/IoT-and-Machine-Learning/Home_Automation/2022-07-12-home-assistant-mqtt-python/2022-07-12) through the __Shell Extension__ whenever your camera connects to your broker - making sure that your camera "entities" remain available in Home Assistant.
