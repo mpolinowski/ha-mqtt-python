@@ -1,0 +1,7 @@
+{
+    "entities": [{
+            "topic": "homeassistant/switch/in9408_garden/alarm_area_red/config",
+            "payload": "{\"device\":{\"identifiers\":\"in9408_garden\",\"manufacturer\":\"INSTAR Deutschland GmbH\",\"model\":\"INSTAR 2k+ IN-9408 WLAN\",\"name\":\"IN-9408 2k+ Garden\",\"configuration_url\":\"http://192.168.2.115:80\"},\"availability\":{\"topic\":\"cameras/115/status/testament\",\"payload_available\":\"{\\\"val\\\":\\\"alive\\\"}\",\"payload_not_available\":\"{\\\"val\\\":\\\"dead\\\"}\"},\"object_id\":\"in9408_garden_alarm_area_red\",\"unique_id\":\"in9408_garden_alarm_area_red\",\"name\":\"Alarm Area Red\",\"icon\":\"mdi:camera-metering-matrix\",\"command_topic\":\"cameras/115/alarm/areas/red/enable\",\"payload_on\":\"{\\\"val\\\":\\\"1\\\"}\",\"payload_off\":\"{\\\"val\\\":\\\"0\\\"}\",\"state_topic\":\"cameras/115/status/alarm/areas/red/enable\",\"state_on\":1,\"state_off\":0,\"value_template\":\"{{ value_json.val}}\",\"qos\":1}"
+        }
+    ]
+}

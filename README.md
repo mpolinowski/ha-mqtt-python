@@ -13,6 +13,9 @@ The [discovery of MQTT devices](https://www.home-assistant.io/docs/mqtt/discover
 ![Home Assistant :: MQTT Discovery :: INSTAR IN-9408 2k+ WQHD IP Camera](./0b17b43cb5ba9a3ebe4046abffd7947ed8984b44.png)
 
 
+> __UPDATE__: Added `Option Parse` to the client script to allow you to define the configuration file you want to use when you call the script. Point the client to the JSON file you want to use with an `-f` flag. This way it is now possible to add several configuration files for all your MQTT devices and use the same Python MQTT client to register those your devices when they connect.
+
+
 ## Adding the Script as a Service
 
 1. Upload this repository into a folder `python_scripts` inside HA's config directory.
@@ -29,7 +32,7 @@ __mqtt_autodiscover_9408_garden.sh__
 
 ```bash
 #!/bin/bash
-python /config/python_scripts/mqtt5_client.py
+python /config/python_scripts/mqtt5_client.py -f /config/python_scripts/test.json
 ```
 
 
